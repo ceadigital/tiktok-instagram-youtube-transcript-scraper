@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cea-tiktok-instagram-youtube-transcript-scraper"
+version = "1.2.0"
+description = "Python CLI, SDK & MCP Server for CEA Digital Instagram, TikTok & YouTube Transcript & Hook Scraper (Direct Unified Key + Apify Store cea_digital/instagram-tiktok-youtube-transcript-scraper)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "httpx>=0.27.0",
+]
+
+[project.urls]
+Homepage = "https://ceadigital.io/tools"
+Repository = "https://github.com/ceadigital/tiktok-instagram-youtube-transcript-scraper"
+ApifyStore = "https://apify.com/cea_digital/instagram-tiktok-youtube-transcript-scraper"
+PostmanCollection = "https://ceadigital.io/templates/postman-collection.json"
+GoogleSheetsTemplate = "https://ceadigital.io/templates/Code.gs"
+N8nWorkflow = "https://ceadigital.io/templates/instagram-tiktok-youtube-transcript-scraper.workflow.json"
+
+[project.scripts]
+cea-transcript = "transcript_cli:main"
+cea-transcript-mcp = "mcp_server:main"

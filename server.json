@@ -1,0 +1,54 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.ceadigital/tiktok-instagram-youtube-transcript-scraper",
+  "title": "TikTok, Instagram Reels & YouTube Shorts Transcript & 0-3s Hook Scraper MCP",
+  "description": "Extract 0-3s spoken hooks, 0-3s burned-in visual OCR captions, hook retention scores, timecoded transcripts, UGC creator briefs, and localized ad scripts from TikTok, Instagram Reels, and YouTube Shorts.",
+  "websiteUrl": "https://ceadigital.io/tools",
+  "repository": {
+    "url": "https://github.com/ceadigital/tiktok-instagram-youtube-transcript-scraper",
+    "source": "github"
+  },
+  "version": "1.2.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://ceadigital.io/mcp"
+    }
+  ],
+  "tools": [
+    {
+      "name": "instagram_tiktok_youtube_transcript_scraper",
+      "description": "Extract 0-3s spoken hooks, 0-3s burned-in visual OCR frame captions, hook retention scores, full timecoded transcripts, UGC ad briefs, and localized script translations from TikTok, Instagram Reels, and YouTube Shorts URLs.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "videoUrls": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri",
+              "minLength": 10,
+              "maxLength": 500
+            },
+            "minItems": 1,
+            "maxItems": 25,
+            "description": "List of TikTok, Instagram Reels, or YouTube Shorts/Watch URLs (1 to 25 URLs per request).",
+            "default": ["https://www.youtube.com/watch?v=dQw4w9WgXcQ"]
+          },
+          "generateUgcBrief": {
+            "type": "boolean",
+            "default": true,
+            "description": "Generate a structured 3-act UGC creator script brief (0-3s Hook, Problem/Agitation, Solution + CTA) based on the video transcript."
+          },
+          "translateTo": {
+            "type": "string",
+            "enum": ["es", "de", "pt", "fr", "en"],
+            "default": "es",
+            "description": "Optional ISO 639-1 language code to localize the hook and ad script ('es', 'de', 'pt', 'fr', 'en')."
+          }
+        },
+        "required": ["videoUrls"]
+      }
+    }
+  ]
+}
