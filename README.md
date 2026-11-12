@@ -3,8 +3,7 @@
 [![Apify Store](https://img.shields.io/badge/Apify_Store-cea__digital%2Finstagram--tiktok--youtube--transcript--scraper-00C853?style=flat-square)](https://apify.com/cea_digital/instagram-tiktok-youtube-transcript-scraper)
 [![Direct Unified Key](https://img.shields.io/badge/Direct_Unified_Key-%242_Tripwire_%7C_%2429%2Fmo-2563EB?style=flat-square)](https://ceadigital.io/tools)
 [![Run in Postman](https://img.shields.io/badge/Run_in_Postman-v2.1_Collection-FF6C37?style=flat-square&logo=postman&logoColor=white)](https://ceadigital.io/templates/postman-collection.json)
-[![Smithery MCP](https://smithery.ai/badge/@ceadigital/tiktok-instagram-youtube-transcript-scraper)](https://smithery.ai/server/@ceadigital/tiktok-instagram-youtube-transcript-scraper)
-[![Glama MCP](https://img.shields.io/badge/Glama_MCP-Grade_A_TDQS-8B5CF6?style=flat-square)](https://glama.ai/mcp/servers/@ceadigital/tiktok-instagram-youtube-transcript-scraper)
+[![Glama MCP](https://img.shields.io/badge/Glama-MCP_Directory-8B5CF6?style=flat-square)](https://glama.ai/mcp/servers/ceadigital/tiktok-instagram-youtube-transcript-scraper)
 [![Zero Charge on Silent](https://img.shields.io/badge/Miss_Guarantee-%240.00_on_Silent_or_Private_Videos-10B981?style=flat-square)](https://ceadigital.io/tools)
 
 Extract **0–3s spoken hooks**, **0–3s burned-in visual OCR captions**, **hook retention scores**, **timecoded transcripts**, **UGC creator briefs**, and **localized ad scripts** (`es`, `de`, `pt`, `fr`) from TikTok, Instagram Reels, and YouTube Shorts over pure HTTP (`Accept-Encoding: gzip, deflate`, zero headless browser).
@@ -21,8 +20,7 @@ Extract **0–3s spoken hooks**, **0–3s burned-in visual OCR captions**, **hoo
 | **1-Click Google Sheets Custom Function (`=VIDEOHOOK(A2, "es")`)** | **[https://ceadigital.io/templates/Code.gs](https://ceadigital.io/templates/Code.gs)** |
 | **1-Click n8n Native Workflow Template (`.workflow.json`)** | **[https://ceadigital.io/templates/instagram-tiktok-youtube-transcript-scraper.workflow.json](https://ceadigital.io/templates/instagram-tiktok-youtube-transcript-scraper.workflow.json)** |
 | **Clay.com HTTP API Column Blueprints** | **[https://ceadigital.io/templates/clay-http-column-blueprints.json](https://ceadigital.io/templates/clay-http-column-blueprints.json)** |
-| **Smithery MCP Registry** | **[https://smithery.ai/server/@ceadigital/tiktok-instagram-youtube-transcript-scraper](https://smithery.ai/server/@ceadigital/tiktok-instagram-youtube-transcript-scraper)** |
-| **Glama MCP Server Directory** | **[https://glama.ai/mcp/servers/@ceadigital/tiktok-instagram-youtube-transcript-scraper](https://glama.ai/mcp/servers/@ceadigital/tiktok-instagram-youtube-transcript-scraper)** |
+| **Glama MCP Server Directory** | **[https://glama.ai/mcp/servers/ceadigital/tiktok-instagram-youtube-transcript-scraper](https://glama.ai/mcp/servers/ceadigital/tiktok-instagram-youtube-transcript-scraper)** |
 
 ---
 
@@ -74,16 +72,11 @@ curl -sS -X POST "https://api.apify.com/v2/acts/cea_digital~instagram-tiktok-you
 
 ---
 
-## Quickstart #3 — Model Context Protocol (MCP) for Claude, Cursor, Smithery & Glama
+## Quickstart #3 — Model Context Protocol (MCP) for Claude, Cursor & Glama
 
 ### Remote Streamable-HTTP MCP (Zero Install)
 ```bash
 claude mcp add --transport http ceadigital-b2a https://ceadigital.io/mcp
-```
-
-### Smithery 1-Click Install
-```bash
-npx -y @smithery/cli install @ceadigital/tiktok-instagram-youtube-transcript-scraper --client claude
 ```
 
 ### Local Stdio MCP Server (`mcp_server.py`)
